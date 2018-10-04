@@ -1,8 +1,8 @@
-package com.atovi.locksdk.example.dao;
+package com.atovi.lock.sdk.example.dao;
 
 import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
-import com.atovi.locksdk.example.model.Device;
+import com.atovi.lock.sdk.example.model.Device;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example.view;
+package com.atovi.lock.sdk.example.view;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.atovi.locksdk.example.R;
-import com.atovi.locksdk.example.model.Device;
+import com.atovi.lock.sdk.example.R;
+import com.atovi.lock.sdk.example.model.Device;
 
 import java.util.ArrayList;
 import java.util.List;

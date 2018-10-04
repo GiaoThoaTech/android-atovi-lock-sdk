@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example.model;
+package com.atovi.lock.sdk.example.model;
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;

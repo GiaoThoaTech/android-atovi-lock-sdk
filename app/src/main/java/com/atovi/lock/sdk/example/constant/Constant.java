@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example.constant;
+package com.atovi.lock.sdk.example.constant;
 
 public class Constant {
     public static final String DEVICE_NAME = "DEVICE_NAME";

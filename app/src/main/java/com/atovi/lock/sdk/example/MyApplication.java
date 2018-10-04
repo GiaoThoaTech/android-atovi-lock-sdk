@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example;
+package com.atovi.lock.sdk.example;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.app.Application;

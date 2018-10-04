@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example.custom;
+package com.atovi.lock.sdk.example.custom;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.atovi.locksdk.example.R;
 import com.atovi.lock.sdk.constant.LockStatus;
+import com.atovi.lock.sdk.example.R;
 
 public class LockControlView extends View {
 

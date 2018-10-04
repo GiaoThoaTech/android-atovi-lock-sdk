@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example.view;
+package com.atovi.lock.sdk.example.view;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -14,12 +14,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.atovi.locksdk.example.R;
-import com.atovi.locksdk.example.constant.Constant;
-import com.atovi.locksdk.example.model.Device;
 import com.atovi.lock.sdk.api.ScanLockAPI;
 import com.atovi.lock.sdk.callback.ScanLockCallback;
 import com.atovi.lock.sdk.constant.BleState;
+import com.atovi.lock.sdk.example.R;
+import com.atovi.lock.sdk.example.constant.Constant;
+import com.atovi.lock.sdk.example.model.Device;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.atovi.locksdk.example.view;
+package com.atovi.lock.sdk.example.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,11 +14,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import com.atovi.locksdk.example.R;
-import com.atovi.locksdk.example.constant.Constant;
-import com.atovi.locksdk.example.dao.DeviceDAO;
-import com.atovi.locksdk.example.model.Device;
+import com.atovi.lock.sdk.example.R;
+import com.atovi.lock.sdk.example.constant.Constant;
+import com.atovi.lock.sdk.example.dao.DeviceDAO;
+import com.atovi.lock.sdk.example.model.Device;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
