@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_menu_size">48dp</dimen>
+    <dimen name="fab_menu_margin">24dp</dimen>
+    <dimen name="fab_menu_radius">80dp</dimen>
+</resources>

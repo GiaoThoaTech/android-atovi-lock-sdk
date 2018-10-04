@@ -1,4 +1,4 @@
-package com.atovi.lock.sdk;
+package com.atovi.lock.sdk.example;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.atovi.lock.sdk;
+package com.atovi.lock.sdk.example;
 
 import org.junit.Test;
 

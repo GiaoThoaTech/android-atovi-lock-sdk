@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AndroidAtoviLockSdk</string>
+    <string name="app_name">Atovi Lock SDK Example</string>
+    <string name="title_activity_scan">Scan Lock</string>
+
 </resources>
