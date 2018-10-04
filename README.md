@@ -1,4 +1,27 @@
 # Android Atovi Lock API
+
+## Table of contents
+
+1. [Prerequisites](#prerequisites)
+1. [Installing](#installing)
+1. [Usage](#usage)
+   1. [Scan Lock](#scan-lock)
+        1. [callback](#scan-callback)
+        1. [init](#init-scanlockapi)
+        1. [start scan](#start-scan)
+        1. [stop scan](#start-scan)
+   1. [Control Lock](#control-lock)
+        1. [callback](#control-callback)
+        1. [init](#init-atovilockapi)
+        1. [open connect](#open-connect)
+        1. [control](#control)
+        1. [change key](#change-key)
+        1. [disconnect](#disconnect)
+        1. [Function](#function)
+1. [Support](#support)
+1. [Thanks](#thanks)
+1. [License](#license)
+
 ## Prerequisites
 ### IDE
 `Android Studio`
@@ -8,7 +31,7 @@
 `Atovi Lock`
 ## Installing
 #### Step 1
-[Download atovi-lock-api.arr](https://gitlab.com/gtek/atovi/atovi_lib_android/blob/develop/libs/atovi-lock-api.aar)
+[Download atovi-lock-api.arr](https://github.com/GiaoThoaTech/android-atovi-lock-sdk/raw/master/app/sdk/atovi-lock-sdk.aar)
 #### Step 2
 Copy file `atovi-lock-api.arr` you have just download and paste it in libs folder (create if not have) under app folder of your project
 
@@ -43,7 +66,7 @@ dependencies {
 ```
 ## Usage
 ### Scan Lock
-callback:
+#### scan callback:
 ```java
 private ScanLockCallback scanLockCallback = new ScanLockCallback(){
         @Override
@@ -79,17 +102,17 @@ private ScanLockCallback scanLockCallback = new ScanLockCallback(){
         }
     };
 ```
-init ScanLockAPI
+#### init scanLockAPI
 
 ```java
     ScanLockAPI scanLockAPI = new ScanLockAPI(context, scanLockCallback);
 ```
 
-start
+#### start scan
 ```java
      scanLockAPI.startScan();
 ```
-stop
+#### stop scan
 ```java
     scanLockAPI.stopScan();
 ```
@@ -103,7 +126,7 @@ stop
 ```
 
 ### Control Lock
-callback
+#### control callback
 ```java
 private AtoviLockCallback atoviLockCallback = new AtoviLockCallback() {
         @Override
@@ -172,30 +195,31 @@ private AtoviLockCallback atoviLockCallback = new AtoviLockCallback() {
         }
     };
 ```
-Init Model AtoviLock and AtoviLockAPI
+#### init AtoviLockAPI
 ```java
+//model AtoviLock
 AtoviLock atoviLock = new AtoviLock("lock address",
                 "lock name",
                 "key",
                 boolean isAdmin);//can enter default is false
-
+//AtoviLockAPI
 AtoviLockAPI atoviLockAPI = new AtoviLockAPI(context, 
             atoviLock, atoviLockCallback);
 ```
-Open Connect
+#### open connect
 ```java
 atoviLockAPI.connect();
 ```
-Control lock
+#### control
 ```java
 atoviLockAPI.control();
 ```
-Change key
+#### change key
 ```java
 //key is type of int
 atoviLockAPI.changeKey(oldKey, newKey);
 ```
-Disconnect
+#### disconnect
 ```java
 atoviLockAPI.disConnect();
 ```
@@ -207,7 +231,7 @@ atoviLockAPI.disConnect();
         atoviLockAPI.disConnect();
     }
 ```
-Function
+#### Function
 
 | Function | Description | Method Callback
 | --- | --- | --- |
@@ -216,3 +240,31 @@ Function
 | isConnected() | check ble and lock is connected | value boolean|
 | control() | action control lock (If the lock was closed then open and vice versa; If lock is disconnect then method connect() will be call firstly)| updateLock(int result, AtoviLock atoviLock), lockStatus(LockStatus lockStatus)|
 | changeKey(int oldKey, int newKey) | change key access lock | changeKey(boolean isSuccess, Integer newKey) |
+
+## Support
+
+non-commercial — [Atovi Website](https://atovi.vn)
+
+commercial — drop an email to business@giaothoatech.com for more info
+ 
+## Thanks
+[Polidea RxAndroidBle](https://github.com/Polidea/RxAndroidBle)
+
+[Trello RxLifecycle](https://github.com/trello/RxLifecycle)
+## License
+Copyright 2017 Atovi Smart Lock
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+
