@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -64,6 +65,13 @@ public class ScanActivity extends AppCompatActivity implements DeviceAdapter.Dev
         @Override
         public void bleState(BleState bleState) {
             Toast.makeText(ScanActivity.this, "ble State: " + bleState, Toast.LENGTH_SHORT).show();
+            switch (bleState) {
+                case READY:
+                case BLUETOOTH_NOT_ENABLED:
+                case BLUETOOTH_NOT_AVAILABLE:
+                case LOCATION_SERVICES_NOT_ENABLED:
+                case LOCATION_PERMISSION_NOT_GRANTED:
+            }
         }
 
         @Override

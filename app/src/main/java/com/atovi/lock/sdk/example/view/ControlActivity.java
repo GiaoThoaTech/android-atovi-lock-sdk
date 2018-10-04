@@ -143,6 +143,13 @@ public class ControlActivity extends AppCompatActivity implements View.OnClickLi
         @Override
         public void bleState(BleState bleState) {
             Toast.makeText(ControlActivity.this, "ble state: " + bleState, Toast.LENGTH_SHORT).show();
+            switch (bleState) {
+                case READY:
+                case BLUETOOTH_NOT_ENABLED:
+                case BLUETOOTH_NOT_AVAILABLE:
+                case LOCATION_SERVICES_NOT_ENABLED:
+                case LOCATION_PERMISSION_NOT_GRANTED:
+            }
         }
 
         @Override
@@ -196,6 +203,15 @@ public class ControlActivity extends AppCompatActivity implements View.OnClickLi
 
             lockControlView.setStatus(lockStatus);
             Log.d(TAG, "lockStatus: " + lockStatus);
+
+            switch (lockStatus) {
+                case CONNECTING:
+                case DISCONNECT:
+                case LOCKING:
+                case LOCK:
+                case UNLOCKING:
+                case UNLOCK:
+            }
         }
 
         @Override
