@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Atovi Lock SDK Example</string>
     <string name="title_activity_scan">Scan Lock</string>
+    <string name="error">Error</string>
+    <string name="ble_not_support">Your device don\'t support ble</string>
+    <string name="permission_location">Permission Location</string>
+    <string name="permission_location_message">Please go to settings and enable Location Permission</string>
+    <string name="service_ble_message">Please enable Bluetooth service</string>
+    <string name="service_location_message">Please enable Location service</string>
 
 </resources>

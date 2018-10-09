@@ -21,6 +21,7 @@ import com.atovi.lock.sdk.ble.BleDeviceManager;
 import com.atovi.lock.sdk.callback.AtoviLockCallback;
 import com.atovi.lock.sdk.constant.BleState;
 import com.atovi.lock.sdk.constant.LockStatus;
+import com.atovi.lock.sdk.example.util.DialogUtil;
 import com.atovi.lock.sdk.model.AtoviLock;
 import com.atovi.lock.sdk.example.R;
 import com.atovi.lock.sdk.example.constant.Constant;
@@ -142,13 +143,22 @@ public class ControlActivity extends AppCompatActivity implements View.OnClickLi
 
         @Override
         public void bleState(BleState bleState) {
-            Toast.makeText(ControlActivity.this, "ble state: " + bleState, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(ControlActivity.this, "ble state: " + bleState, Toast.LENGTH_SHORT).show();
             switch (bleState) {
                 case READY:
+                    Toast.makeText(ControlActivity.this, "ble State: " + bleState, Toast.LENGTH_SHORT).show();
+                    break;
                 case BLUETOOTH_NOT_ENABLED:
+                    DialogUtil.showDialog(ControlActivity.this, R.string.service_ble_message);
+                    break;
                 case BLUETOOTH_NOT_AVAILABLE:
+                    DialogUtil.showDialog(ControlActivity.this, R.string.error, R.string.ble_not_support);
+                    break;
                 case LOCATION_SERVICES_NOT_ENABLED:
+                    break;
                 case LOCATION_PERMISSION_NOT_GRANTED:
+                    DialogUtil.showDiaLogLocationPermission(ControlActivity.this);
+                    break;
             }
         }
 

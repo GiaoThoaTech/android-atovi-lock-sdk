@@ -11,18 +11,20 @@ import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.atovi.lock.sdk.api.ScanLockAPI;
 import com.atovi.lock.sdk.callback.ScanLockCallback;
 import com.atovi.lock.sdk.constant.BleState;
+import com.atovi.lock.sdk.example.util.DialogUtil;
 import com.atovi.lock.sdk.example.R;
 import com.atovi.lock.sdk.example.constant.Constant;
 import com.atovi.lock.sdk.example.model.Device;
 
 import java.util.ArrayList;
+
+import app.dinus.com.loadingdrawable.LoadingView;
 
 public class ScanActivity extends AppCompatActivity implements DeviceAdapter.DeviceListener {
     private DeviceAdapter deviceAdapter;
@@ -48,8 +50,8 @@ public class ScanActivity extends AppCompatActivity implements DeviceAdapter.Dev
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         scanLockAPI.startScan();
         deviceAdapter.clear();
     }
@@ -64,13 +66,23 @@ public class ScanActivity extends AppCompatActivity implements DeviceAdapter.Dev
 
         @Override
         public void bleState(BleState bleState) {
-            Toast.makeText(ScanActivity.this, "ble State: " + bleState, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(ScanActivity.this, "ble State: " + bleState, Toast.LENGTH_SHORT).show();
             switch (bleState) {
                 case READY:
+                    Toast.makeText(ScanActivity.this, "ble State: " + bleState, Toast.LENGTH_SHORT).show();
+                    break;
                 case BLUETOOTH_NOT_ENABLED:
+                    DialogUtil.showDialog(ScanActivity.this, R.string.service_ble_message);
+                    break;
                 case BLUETOOTH_NOT_AVAILABLE:
+                    DialogUtil.showDialog(ScanActivity.this, R.string.error, R.string.ble_not_support);
+                    break;
                 case LOCATION_SERVICES_NOT_ENABLED:
+                    DialogUtil.showDialog(ScanActivity.this, R.string.service_location_message);
+                    break;
                 case LOCATION_PERMISSION_NOT_GRANTED:
+                    DialogUtil.showDiaLogLocationPermission(ScanActivity.this);
+                    break;
             }
         }
 
