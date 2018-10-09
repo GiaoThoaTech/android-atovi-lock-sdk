@@ -31,7 +31,7 @@
 [Atovi Lock](https://atovi.vn)
 ## Setup
 #### Step 1
-Download [atovi-lock-api.aar](https://github.com/GiaoThoaTech/android-atovi-lock-sdk/raw/master/app/sdk/atovi-lock-sdk.aar)
+Download `atovi-lock-api.aar` (contact tech@giaothoatech.com)
 #### Step 2
 Copy file `atovi-lock-api.aar` you have just download and paste it in libs folder (create if not exists) under app folder of your project
 
