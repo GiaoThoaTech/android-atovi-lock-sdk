@@ -11,7 +11,7 @@
         layout="@layout/toolbar" />
 
     <app.dinus.com.loadingdrawable.LoadingView
-        android:id="@+id/level_view"
+        android:id="@+id/loading_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:loading_renderer="SwapLoadingRenderer"
@@ -25,5 +25,5 @@
         android:id="@+id/rc_scan_lock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/level_view" />
+        app:layout_constraintTop_toBottomOf="@+id/loading_view" />
 </android.support.constraint.ConstraintLayout>
